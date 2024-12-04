@@ -1,0 +1,30 @@
+﻿@page
+@model PaymentPlatform.Pages.DashboardModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h2>Welcome to the Dashboard!</h2>
+<p>You are logged in!</p>
+
+<!-- Initiate Payment Section -->
+<div class="payment-section">
+    <h3>Initiate Payment</h3>
+    <form method="post">
+        <div class="form-group">
+            <label for="amount">Amount</label>
+            <input type="text" class="form-control" id="amount" name="amount" placeholder="Enter payment amount" />
+        </div>
+
+        <div class="form-group">
+            <label for="paymentMethod">Payment Method</label>
+            <select class="form-control" id="paymentMethod" name="paymentMethod">
+                <option value="CreditCard">Credit Card</option>
+                <option value="PayPal">PayPal</option>
+                <option value="BankTransfer">Bank Transfer</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Initiate Payment</button>
+    </form>
+</div>
